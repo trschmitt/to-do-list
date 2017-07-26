@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "ToDo list creating using express and node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "to-do-list"
+  },
+  "keywords": [
+    "express",
+    "node.js",
+    "validator"
+  ],
+  "author": "Tristan Schmitt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
