@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <form action="/todoList" method="post">
+    <form id="search" action="/todoList" method="post">
       <button type="submit">ToDo Item submit</button>
       <input type="text" name="itemInput" value="">
     </form>
     {{#error}}
       <h4>{{.}}</h4>
     {{/error}}
-    <form class="" action="index.html" method="post">
-      <ul>
+    <form action="index.html" method="post">
+      <ul id="tasks">
         <li>
           <button type="button" name="test">Completed</button>
           <p>Test tasks to be competed and moved</p>
@@ -34,7 +34,6 @@
           </li>
         {{/todoList}}
       </ul>
-      <hr>
       <ul>
         <!-- ToDo list with all completed items -->
         <!-- store completed todo's in another array and display here ^^^^^-->

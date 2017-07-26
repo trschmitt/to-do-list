@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 module.exports = router;
 
+router.get("/styles.css", (req, res) => {
+  res.send(fs.readFileSync("/styles.css"));
+})
 
 router.get("/", (req, res) => {
 	res.render("index", { todoList: todoList });

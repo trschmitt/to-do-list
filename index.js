@@ -3,6 +3,7 @@ const app = express();
 const mustacheExpress = require('mustache-express');
 const bodyParser = require("body-parser");
 const expressValidator = require("express-validator");
+const fs = require('fs');
 
 //setup body parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -10,8 +11,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //setup express validator
 app.use(expressValidator());
 
+app.use(express.static("public"));
+
 //setup router and connect other JS filess
 app.use(require("./todoRoutes"))
+
 
 //register '.mustache'
 app.engine("mustache", mustacheExpress());
