@@ -6,15 +6,38 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <form method="post">
-      <button type="submit" name="item-submit">ToDo Item submit</button>
-      <input type="text" name="item-input" value="">
+    <form action="/todoList" method="post">
+      <button type="submit">ToDo Item submit</button>
+      <input type="text" name="itemInput" value="">
+    </form>
+    {{#error}}
+      <h4>{{.}}</h4>
+    {{/error}}
+    <form class="" action="index.html" method="post">
       <ul>
-        <!-- ToDo list with all entered values and the completed buttons that accompany them -->
+        <li>
+          <button type="button" name="test">Completed</button>
+          <p>Test tasks to be competed and moved</p>
+        </li>
+        <li>
+          <button type="button" name="test">Completed</button>
+          <p>Test tasks to be competed and moved</p>
+        </li>
+        <li>
+          <button type="button" name="test">Completed</button>
+          <p>Test tasks to be competed and moved</p>
+        </li>
+        {{#todoList}}
+          <li>
+            <button type="button" name="complete">Completed</button>
+            {{item}}
+          </li>
+        {{/todoList}}
       </ul>
       <hr>
       <ul>
         <!-- ToDo list with all completed items -->
+        <!-- store completed todo's in another array and display here ^^^^^-->
       </ul>
   </form>
   </body>

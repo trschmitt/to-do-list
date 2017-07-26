@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 
 //setup router and connect other JS filess
-app.use(require("./studentRoutes"))
+app.use(require("./todoRoutes"))
 
 //register '.mustache'
 app.engine("mustache", mustacheExpress());
